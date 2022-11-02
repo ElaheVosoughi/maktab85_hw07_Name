@@ -29,26 +29,53 @@
 //-------------------------------------
 
 //---------------answer 2--------------
-let userInput = [];
-const promptUser = function() {
-  let getArr = prompt("insert your array");
-  if (getArr !== " ") {
-    getArr = getArr.split(",");
-    userInput.push(getArr);
-    promptUser();
-  } else {
-    console.log(userInput);
+// let userInput = [];
+// const promptUser = function() {
+//   let getArr = prompt("insert your array");
+//   if (getArr !== " ") {
+//     getArr = getArr.split(",");
+//     userInput.push(getArr);
+//     promptUser();
+//   } else {
+//     console.log(userInput);
+//   }
+// };
+
+// promptUser();
+
+// let newArr = [];
+// const sortArr = function (arrayOfArrays) {
+//   arrayOfArrays.forEach((item) => {
+//     newArr = newArr.concat(item);
+//   });
+//   return newArr;
+// };
+
+// console.log(sortArr(userInput).sort((a, b) => b-a).toString(userInput));
+
+//----------------answer3-------------
+
+let values = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
+let uniqueArr = function (any) {
+  for (let i = 0; i < any.length; i++) {
+    for (let j = any.length-1; j>=0 ; j--) {
+      if (i !== j) {
+        if (any[j] === any[i]) {
+          any.splice(j,1);
+        }
+      }
+    }
   }
+  return any;
 };
-
-promptUser();
-
-let newArr = [];
-const sortArr = function (arrayOfArrays) {
-  arrayOfArrays.forEach((item) => {
-    newArr = newArr.concat(item);
-  });
-  return newArr;
-};
-
-console.log(sortArr(userInput).sort((a, b) => b-a).toString(userInput));
+console.log(uniqueArr(values));

@@ -30,7 +30,7 @@
 
 //---------------answer 2--------------
 let userInput = [];
-const promptUser = function () {
+const promptUser = function() {
   let getArr = prompt("insert your array");
   if (getArr !== " ") {
     getArr = getArr.split(",");
@@ -51,4 +51,4 @@ const sortArr = function (arrayOfArrays) {
   return newArr;
 };
 
-console.log(sortArr(userInput).sort((a, b) => b-a));
+console.log(sortArr(userInput).sort((a, b) => b-a).toString(userInput));

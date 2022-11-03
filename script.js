@@ -55,27 +55,86 @@
 
 //----------------answer3-------------
 
-let values = [
-  "Hare",
-  "Krishna",
-  "Hare",
-  "Krishna",
-  "Krishna",
-  "Krishna",
-  "Hare",
-  "Hare",
-  ":-O",
-];
-let uniqueArr = function (any) {
-  for (let i = 0; i < any.length; i++) {
-    for (let j = any.length-1; j>=0 ; j--) {
-      if (i !== j) {
-        if (any[j] === any[i]) {
-          any.splice(j,1);
-        }
-      }
-    }
-  }
-  return any;
-};
-console.log(uniqueArr(values));
+// let values = [
+//   "Hare",
+//   "Krishna",
+//   "Hare",
+//   "Krishna",
+//   "Krishna",
+//   "Krishna",
+//   "Hare",
+//   "Hare",
+//   ":-O",
+// ];
+// let uniqueArr = function (any) {
+//   for (let i = 0; i < any.length; i++) {
+//     for (let j = any.length-1; j>=0 ; j--) {
+//       if (i !== j) {
+//         if (any[j] === any[i]) {
+//           any.splice(j,1);
+//         }
+//       }
+//     }
+//   }
+//   return any;
+// };
+// console.log(uniqueArr(values));
+
+//--------------------answer 4-------------------
+
+// let words = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// let aclean = function (words) {
+//   let cloneWords = [...words];
+
+//   for (let i = 0; i < words.length; i++) {
+//     let word = words[i];
+//     let alphabetical = word.split("").sort().join("").toLowerCase();
+
+//     for (let j = words.length-1; j>=0 ; j--) {
+//   if (i === j) {
+//         continue;
+//       }
+
+//       var other = words[j];
+//       if (alphabetical === other.split("").sort().join("").toLowerCase()) {
+//         cloneWords.splice(j, 1);
+//         words.splice(j, 1);
+//       }
+//     }
+//   }
+//   return cloneWords;
+// };
+
+// console.log(aclean(words));
+//---------------------quiz 8 answer7---------------------------
+
+// function calc(operator) {
+//   switch (operator) {
+//     case "+":
+//       return function(a,b){
+//        return a+b;
+//       }
+//       break;
+//       case "-":
+//         return function(a,b){
+//          return a-b;
+//         }
+//         break;
+//         case "/":
+//       return function(a,b){
+//        return a/b;
+//       }
+//       break;
+//       case "*":
+//         return function(a,b){
+//          return a*b;
+//         }
+// break;
+//   }
+
+// }
+// const result = calc("+");
+
+// console.log(result(3,4));
+//------------------------------------------------------------------
